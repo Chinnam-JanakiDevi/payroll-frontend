@@ -1,0 +1,43 @@
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fa-solid fa-bars"></i></label>
+  <label class="logo">PayRoll</label>
+  <ul>
+    <li class="active"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/view" routerLinkActive="active">view</a></li>
+    <li><a routerLink="/bill" routerLinkActive="active">bill</a></li>
+    <li><a routerLink="/contactus" routerLinkActive="active">contactUs</a></li>
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="/employee1" routerLinkActive="active" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          hra Table
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <li><a routerLink="/login" routerLinkActive="active" class="btn btn-dark mb-3 p-2">Insert</a></li>
+          <li><a routerLink="/view" routerLinkActive="active" class="btn btn-dark mb-3 p-2">Read</a></li>
+          <li><a routerLink="/hraupdate" routerLinkActive="active" class="btn btn-dark mb-3 p-2">update</a></li>
+          <li><a routerLink="/hradelete" routerLinkActive="active" class="btn btn-dark mb-3 p-2">delete</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" routerLink="/employee1" routerLinkActive="active" role="button"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        PF Table
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+        <li><a routerLink="/pftable" routerLinkActive="active" class="btn btn-dark mb-3 p-2">Insert</a></li>
+        <li><a routerLink="/pfread" routerLinkActive="active" class="btn btn-dark mb-3 p-2">Read</a></li>
+        <li><a routerLink="/pfupdate" routerLinkActive="active" class="btn btn-dark mb-3 p-2">update</a></li>
+        <li><a routerLink="/pfdelete" routerLinkActive="active" class="btn btn-dark mb-3 p-2">delete</a></li>
+      </ul>
+    </li>
+    <li><a routerLink="/example" routerLinkActive="active">Example</a></li>
+
+  </ul>
+</nav>
+<router-outlet></router-outlet>

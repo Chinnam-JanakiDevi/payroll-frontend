@@ -1,0 +1,53 @@
+<marquee behavior="scroll" direction="right">
+    <h1 style="text-align: center;color: brown;">**please enter your category to check your details**</h1>
+</marquee>
+<form>
+    <table align="center" cellpadding="10">
+
+        <tr>
+            <td style="font-size:xx-large;color: darkblue;">Category:</td>
+            <td><input type="text" id="name" name="catg" placeholder="enter your category" [(ngModel)]="ipf.catg"></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="1"><input type="submit" value="submit" (click)="Read()"></td>
+        </tr>
+
+
+        <br>
+
+        <!-- <h1 style="text-align: center;">HRA Details</h1> -->
+        <div *ngIf="canShowData">
+            <tr>
+                <td>Category</td>
+                <td><input type="text" id="name" name="catg1" placeholder="your category" [(ngModel)]="ipf.catg"
+                        [value]=a[0] disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>Wef_date</td>
+                <td><input type="date" id="name" name="wef_date" placeholder="date" [(ngModel)]="ipf.wef_date"
+                        [value]=a[1] disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>PF percentage</td>
+                <td><input type="text" id="name" name="pf_per" placeholder="pf percentage" [(ngModel)]="ipf.pf_per"
+                        [value]=a[2] disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>FPF percentage</td>
+                <td><input type="text" id="name" name="fpf_per" placeholder="fpf percentage" [(ngModel)]="ipf.fpf_per"
+                        [value]=a[3] disabled>
+                </td>
+            </tr>
+            <tr>
+                <td>EPF percentage</td>
+                <td><input type="text" id="name" name="epf_per" placeholder="epf percentage" [(ngModel)]="ipf.epf_per"
+                        [value]=a[4] disabled>
+                </td>
+            </tr>
+            <td align="center" colspan="1"><input type="reset" value="reset"></td>
+        </div>
+    </table>
+</form>

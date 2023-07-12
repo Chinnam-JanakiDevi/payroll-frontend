@@ -1,0 +1,46 @@
+<div class="form-group">
+    <br>
+    <pre style="text-align: center;font-size: xx-large;font-weight: bolder;color:black;">HRA TABLE</pre>
+    <form #r="ngForm" (ngSubmit)="Insert(r)">
+        <table align="center" cellpadding="10">
+            <tr>
+                <td>Category</td>
+                <td><input type="text" id="name" name="catg" placeholder="enter your category" ngModel required>
+                    <div *ngIf="r.controls['catg']?.['touched'] && r.controls['catg']?.['errors']" class="red">
+                        <div *ngIf="r.controls['catg']?.['errors']?.['required']">
+                            Enter your category
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Wef_date</td>
+                <td><input type="date" id="name" name="wef_date" placeholder="enter wef date" ngModel required>
+                    <div *ngIf="r.controls['wef_date']?.['touched'] && r.controls['wef_date']?.['errors']" class="red">
+                        <div *ngIf="r.controls['wef_date']?.['errors']?.['required']" >
+                            Enter wef date
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>HRA_per</td>
+                <td><input type="text" id="name" name="hra_per" placeholder="enter HRA_per" ngModel required>
+                    <div *ngIf="r.controls['hra_per']?.['touched'] && r.controls['hra_per']?.['errors']" class="red">
+                        <div *ngIf="r.controls['hra_per']?.['errors']?.['required']">
+                            Enter hra percentage
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td align="center" colspan="1"><input type="submit" value="submit"  [disabled]="r.invalid" >
+                  
+            </tr>
+        </table>
+    </form>
+    <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+    <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+</div>
+
