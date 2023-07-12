@@ -12,8 +12,8 @@ export class ExampleComponent implements OnInit{
   ngOnInit(): void {}
   constructor(private service:HraServiceService){}
   Subscription:Subscription=new Subscription();
-  a:any[any]=[];
-  show=false;
+  a:any[]=[];
+  show=true;
   seasons:string='summer';
   flower:exampleinterface={
     id:0,
@@ -21,12 +21,13 @@ export class ExampleComponent implements OnInit{
     names:'',
     season:'',
   }
+  url="https://www.thespruce.com/thmb/0QHDmutjh9OcQ-V4sHuUjRhPWo0=/6720x0/filters:no_upscale():max_bytes(150000):strip_icc()/tiny-flowers-1315816-02-ffd9607c255d482cb14838988fb5093f.jpg";
   Read(){
     this.Subscription=this.service.Read1(this.seasons).subscribe(
       (Data:any)=>{
         if(Data){
           console.log(Data);
-          this.a = Data;
+          this.a = Data.Result;
           this.show=true;
         }
         else{
