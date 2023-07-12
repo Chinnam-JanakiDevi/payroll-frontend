@@ -1,30 +1,9 @@
-<!-- <form #r="ngForm" (ngSubmit)="Read(r)">
-    <p></p>
-    <div class="container d-flex justify-content-center">
-        Season: <input type="text" [(ngModel)]="flower.season">
-        <input type="submit" value="submit">
-    </div>
-</form> -->
 <button class="btn btn-danger m-2" (click)="Read()">Flowers</button>
 <div *ngIf="show">
     <div *ngIf="!(a.length==0)" class="grid">
-        <!-- <div *ngFor="let Eachflower of a">
-            <div *ngFor="let b ofEachflower ">
-
-
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" [src]="Eachflower.p_image" alt="Flower Img">
-                <div class="card-body">
-            <h5 class="card-title">{{Eachflower.url}},{{Eachflower.id}}</h5>
-            <p class="card-text">{{Eachflower.names}}</p>
-            <p class="card-text">{{Eachflower.season}}</p>
-            <a href="#" class="btn btn-primary">Order Now</a>
-            </div>
-            </div>
-        </div> -->
         <div *ngFor="let Eachflower of a">
             <div class="card" style="width: 18rem;">
-                <img [src]="url" alt="Image" >
+                <img [src]="url" alt="Image">
                 <div class="card-body">
                     <h5 class="card-title">{{Eachflower[0]}},{{Eachflower[1]}}</h5>
                     <p class="card-text">{{Eachflower[2]}}</p>
